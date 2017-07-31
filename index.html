@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            
+        </title>    
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            #map {
+                height: 500px;
+                width: 100%;
+            }
+        </style>
+        <link rel="shortcut icon" type="image/png" href="img/android.png">
+    </head>
+    <body>
+        <div id="map">    
+        </div>
+        <h2>Hello World</h2>
+        <p>This is some website text !!</p>
+        
+        <script>
+            function initMap() {
+                var location = {lat: -33.868820, lng: 151.209296};
+                var map = new google.maps.Map(document.getElementById("map"), 
+                                              {zoom: 4,
+                                               center: location});
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map
+                });
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTyiu20FeBpJwtnTpVXT3Y4NpuLlcpycM&callback=initMap">
+        
+        </script>
+        
+    </body>    
+</html>
